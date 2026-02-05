@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $quantite = trim($_POST["quantite"] ?? "");
     $prix = trim($_POST["prix"] ?? "");
 
-    // Validation simple
+    // Validation
     if ($nom === "") {
         $erreur = "Veuillez entrer un nom.";
     } elseif (!is_numeric($quantite) || (int)$quantite < 0) {
